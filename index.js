@@ -1,8 +1,10 @@
 var katzDeli = [];
-const takeANumber = (katzDeli, name) => { 
-    katzDeli.push(`${name}`);
-
-  return (`Welcome, ${name}. You are number ${katzDeli.length} in line.`);
+var number = 0
+const takeANumber = (katzDeli) => { 
+  katzDeli.push(number)
+  number++;
+  
+  return (`Welcome, you are number ${number}`);
 }
 
 const nowServing = (katzDeli) => {
@@ -10,6 +12,7 @@ const nowServing = (katzDeli) => {
   while (i < katzDeli.length) {
     i++;
   }
+<<<<<<< HEAD
   if (katzDeli.length === 0) {
     return "There is nobody waiting to be served!"
   }
@@ -29,4 +32,12 @@ const currentLine = (katzDeli) => {
   else {
     return (`The line is currently:` + line)
   }
+=======
+  if (i===0) {
+    return "There is nobody waiting to be served!"
+  }
+    else {
+    return (`Currently serving ${name.shift}.`)
+    }
+>>>>>>> 5bf0917b3a1b3dd3d4e7d1f7f42b6b5dcd2080fb
 }
